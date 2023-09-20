@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.coursework.SplashProgressBar"
+        android:label="fragment_progress__bar"
+        tools:layout="@layout/fragment_progress__bar" >
+        <action
+            android:id="@+id/action_splash_to_main_Screen"
+            app:destination="@id/main_Screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/main_Screen"
+        android:name="com.example.coursework.MainScreen"
+        android:label="fragment_main__screen"
+        tools:layout="@layout/fragment_main__screen" >
+        <action
+            android:id="@+id/action_main_Screen_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_main_Screen_to_forecast"
+            app:destination="@id/forecast" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.example.coursework.Details"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/forecast"
+        android:name="com.example.coursework.Forecast"
+        android:label="fragment_forecast"
+        tools:layout="@layout/fragment_forecast" />
+</navigation>
