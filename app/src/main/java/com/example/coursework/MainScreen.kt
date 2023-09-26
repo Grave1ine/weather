@@ -11,13 +11,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.coursework.databinding.FragmentMainScreenBinding
 import com.example.viewModels.viewModelMainScreen
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import java.sql.Time
 import java.util.*
 import kotlin.concurrent.schedule
 
 //основной экран
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class MainScreen : Fragment() {
 
     private var binding: FragmentMainScreenBinding? = null

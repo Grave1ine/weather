@@ -1,6 +1,7 @@
 package com.example.coursework
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,11 +20,10 @@ import kotlinx.coroutines.*
 import kotlin.concurrent.thread
 
 //более детальная информация о текущей погоде
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class Details : Fragment() {
 
     private var binding: FragmentDetailsBinding? = null
-    private val scope = CoroutineScope(Dispatchers.IO)
     private var job: Job? = null
 
     private inline fun withBinding(block: FragmentDetailsBinding.() -> Unit) {      //чтобы не проверять каждый раз на нулл
@@ -43,10 +43,11 @@ class Details : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        withBinding{
+
 
             dataModel.viewStateDetails.observe(viewLifecycleOwner) {state ->
-
+                Log.i("DETAILS", "State update")
+                withBinding{
                   Temp.setTextKeepState(state.temp.toString())
                   Condition.setTextKeepState(state.condition.toString())
                   FeelsLike.setTextKeepState(state.feelsLike.toString())
@@ -73,7 +74,7 @@ class Details : Fragment() {
     override fun onResume() {
         super.onResume()
 
-
+        dataModel.startTimer()
         job = lifecycleScope.launch {
             while (true) {
                 dataModel.goToInetForDetails()
@@ -84,6 +85,7 @@ class Details : Fragment() {
 
     override fun onPause() {
         super.onPause()
+        dataModel.stopTimer()
         job?.cancel()
     }
 

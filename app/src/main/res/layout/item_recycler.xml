@@ -45,6 +45,7 @@
         >
 
         <TextView
+            style="@style/styleRecycler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,6 +61,7 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/styleRecycler"
                 android:id="@+id/TempMorning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,6 +71,7 @@
                 android:textSize="30dp" />
 
             <TextView
+                style="@style/styleRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -101,6 +104,7 @@
         tools:layout_editor_absoluteX="138dp">
 
         <TextView
+            style="@style/styleRecycler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -116,6 +120,7 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/styleRecycler"
                 android:id="@+id/TempDey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,6 +130,7 @@
                 android:textSize="30dp" />
 
             <TextView
+                style="@style/styleRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -156,6 +162,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            style="@style/styleRecycler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -171,6 +178,7 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/styleRecycler"
                 android:id="@+id/TempEvening"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -180,6 +188,7 @@
                 android:textSize="30dp" />
 
             <TextView
+                style="@style/styleRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -215,6 +224,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            style="@style/styleRecycler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -230,6 +240,7 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/styleRecycler"
                 android:id="@+id/TempNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -239,6 +250,7 @@
                 android:textSize="30dp" />
 
             <TextView
+                style="@style/styleRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -267,5 +279,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_end="146dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

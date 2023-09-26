@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/preview2"
     tools:context=".SplashProgressBar">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -11,8 +12,9 @@
         style="@style/TitleApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -23,20 +25,20 @@
         android:layout_width="200dp"
         android:layout_height="30dp"
         android:scaleY="10"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:ignore="MissingConstraints" />
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:layout_marginBottom="150dp"
-        android:src="@drawable/preview"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/appCompatImageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="180dp"-->
+<!--        android:layout_marginBottom="150dp"-->
+<!--        android:src="@drawable/preview"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

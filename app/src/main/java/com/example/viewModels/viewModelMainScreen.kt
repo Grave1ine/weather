@@ -15,9 +15,10 @@ import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import javax.inject.Inject
 
-//@HiltViewModel
-open class viewModelMainScreen(): ViewModel() {
+@HiltViewModel
+open class viewModelMainScreen @Inject constructor(private val goToInet: AddressServiceModule): ViewModel() {
 
     val _stateMainScreen: MutableLiveData<viewStateMainScreen> = MutableLiveData<viewStateMainScreen>(
         viewStateMainScreen() // Начальное значение (для обращения внутри)
@@ -25,13 +26,13 @@ open class viewModelMainScreen(): ViewModel() {
 
     val viewStateMainScreen: LiveData<viewStateMainScreen> get() = _stateMainScreen.distinctUntilChanged() //для обращения снаружи
 
-    private val goToInet = AddressServiceModule().retrofitService()          //создание ретрофита
+    //private val goToInet = AddressServiceModule().retrofitService()          //создание ретрофита
 
 
     suspend fun goToInetForMainScreen() {
         withContext(Dispatchers.IO) {
             val response = try {
-                goToInet.getWeatherMineScreen()                   //запрос в сеть
+                goToInet.retrofitService().getWeatherMineScreen()                   //запрос в сеть
             } catch (e: Throwable) {
                 Log.e("Main", "Error loading data", e)
                 null

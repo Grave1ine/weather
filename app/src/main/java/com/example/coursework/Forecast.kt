@@ -20,7 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 
 //прогноз погоды на ближайшие 5 дней каждые 3 часа
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class Forecast : Fragment() {
 
     private var binding: FragmentForecastBinding? = null

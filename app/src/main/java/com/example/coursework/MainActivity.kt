@@ -8,7 +8,7 @@ import androidx.navigation.Navigation
 import com.example.coursework.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

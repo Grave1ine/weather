@@ -3,8 +3,9 @@ package com.example.going_online
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
-class AddressServiceModule {
+class AddressServiceModule @Inject constructor() {
 
     private fun createClient() = OkHttpClient.Builder()       //через это приложение идет в сеть?
         .addInterceptor(AuthInterceptor())                    //добавляем отслеживалку запросов?
